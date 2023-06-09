@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600&display=swap");
+
+.addTask{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/img/background.jpg');
+    color: #121212;
+    height: 100vh;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.todo
+{
+    display: flex;
+    margin-right: 20%;
+}
+.input-text{
+    margin: 0 20px 0 0 ;
+    padding: 12px 20px;
+    border-radius: 10px;
+    width: 50vw;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 22px;
+}
