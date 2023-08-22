@@ -2,3 +2,11 @@
     display: flex;
     max-height: 40vh;
 }
+
+ 
+
+@media (max-height: 700px){
+    .carousel{
+        min-height: 70vh;
+    }
+}

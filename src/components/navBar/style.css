@@ -3,6 +3,10 @@ div.navBar.container{
   max-width: 90%;
 }
 
+.navbar{
+  background-color: rgba(255,255,255,.1);
+  backdrop-filter: blur(20px);
+}
 
 nav.navbar {
   position: fixed;
@@ -18,7 +22,7 @@ nav.navbar.scrolled {
 }
 
 .link-brand {
-  width: 8%;
+  width: 15vh;
   
 }
 
@@ -37,6 +41,26 @@ nav.navbar.scrolled {
 .navbar-link.active {
   opacity: 1;
 }
+
+@media (max-width: 1000px ){
+  .link-brand{
+    width: 15%;
+  }
+  .link{
+    margin: 10px 0px;
+  }
+}
+
+
+@media (max-width: 700px ){
+  .link-brand{
+    width: 25%;
+  }
+  .link{
+    margin: 10px 0px;
+  }
+}
+
 /* nav.navbar.scrolled {
     padding: 0px 0;
     background-color: #121212;

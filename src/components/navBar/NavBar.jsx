@@ -81,6 +81,24 @@ const NavBar = () => {
             >
               Contact
             </Link>
+            <Link
+             to="/login"
+              className={
+                activeLink === "login" ? "active navbar-link link" : "navbar-link link"
+              }
+              onClick={() => setActiveLink("login")}
+            >
+              Login
+            </Link>
+            <Link
+             to="/register"
+              className={
+                activeLink === "register" ? "active navbar-link link" : "navbar-link link"
+              }
+              onClick={() => setActiveLink("register")}
+            >
+              Register
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -9,6 +9,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { createContext, useState } from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./components/login/Login";
+import Register from "./components/register/Register";
 
 const data = createContext();
 
@@ -33,6 +35,8 @@ function App() {
               />
               <Route path="/addTask" element={<AddTask />} />
               <Route path="/task" element={<Task />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register /> } />
             </Routes>
           </div>
         </BrowserRouter>

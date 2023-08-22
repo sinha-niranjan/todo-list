@@ -1,0 +1,63 @@
+.login {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?w=1380&t=st=1692701236~exp=1692701836~hmac=c265a32f07c87353e7f5d6d0c0e4bfd88bbb777b656a0b64dcd8d84a277abbb9");
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: center; */
+  align-items: center;
+  width: 40%;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 10%;
+}
+.box > h5 {
+  margin: 50px;
+  font-size: 30px;
+}
+
+.input {
+  width: 50%;
+}
+.input > input {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 30px 10px;
+  width: 100%;
+}
+
+.button {
+  padding: 20px;
+  margin: 30px 10px;
+  width: 40%;
+  border-radius: 20px;
+  background-color: rgba(55, 55, 192, 0.603);
+
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background-color: rgb(55, 55, 192);
+  scale: 1.1;
+}
+
+@media (max-width: 800px) {
+  .box {
+    width: 80%;
+  }
+  .input{
+    margin: 10px 10px;
+  }
+}
