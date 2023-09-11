@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./style.css";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios"
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
+  const location = useLocation();
   const config = {
     headers: { "Content-Type": "application/json" },
     withCredentials: true,
@@ -17,7 +19,14 @@ const Login = () => {
       config
     );
 
-    console.log(data)
+    console.log(data);
+    const redirect = location.search ? location.search.split("=")[1] : "/";
+    
+    if (data.success) {
+      navigate(redirect);
+    }
+
+   
   };
 
   return (

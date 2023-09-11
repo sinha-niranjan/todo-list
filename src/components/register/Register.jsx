@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./style.css";
 import axios from "axios";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
+  const location = useLocation();
   const config = {
     headers: { "Content-Type": "application/json" },
     withCredentials: true,
@@ -19,6 +21,12 @@ const Register = () => {
     );
 
     console.log(data)
+
+    const redirect = location.search ? location.search.split("=")[1] : "/";
+
+    if (data.success) {
+      navigate(redirect);
+    }
   };
 
   return (
