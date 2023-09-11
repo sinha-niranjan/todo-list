@@ -1,9 +1,24 @@
 import React, { useState } from "react";
 import "./style.css";
+import axios from "axios"
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const config = {
+    headers: { "Content-Type": "application/json" },
+    withCredentials: true,
+  };
+  const handleLogin = async () => {
+    const { data } = await axios.post(
+      `https://backend-todo-list-sinha-niranjan.vercel.app/api/v1/login`,
+      { email, password },
+      config
+    );
+
+    console.log(data)
+  };
 
   return (
     <div className="login">
@@ -25,7 +40,7 @@ const Login = () => {
           />
         </div>
         <div className="button">
-          <button>Login</button>
+          <button onClick={handleLogin}>Login</button>
         </div>
       </div>
     </div>
